@@ -32,21 +32,21 @@ const useConditionModalItems = ({
 
   const items: ConditionItem[] = useMemo(
     () => [
-      {
-        label: "Product",
-        value: DiscountConditionType.PRODUCTS,
-        description: "Only for specific products",
-        onClick: () =>
-          layeredModalContext.push({
-            title: "Choose products",
-            onBack: () => layeredModalContext.pop(),
-            view: isDetails ? (
-              <DetailsProductConditionSelector onClose={onClose} />
-            ) : (
-              <AddProductConditionSelector onClose={onClose} />
-            ),
-          }),
-      },
+      // {
+      //   label: "Product",
+      //   value: DiscountConditionType.PRODUCTS,
+      //   description: "Only for specific products",
+      //   onClick: () =>
+      //     layeredModalContext.push({
+      //       title: "Choose products",
+      //       onBack: () => layeredModalContext.pop(),
+      //       view: isDetails ? (
+      //         <DetailsProductConditionSelector onClose={onClose} />
+      //       ) : (
+      //         <AddProductConditionSelector onClose={onClose} />
+      //       ),
+      //     }),
+      // },
       {
         label: "Customer group",
         value: DiscountConditionType.CUSTOMER_GROUPS,
@@ -63,51 +63,51 @@ const useConditionModalItems = ({
           })
         },
       },
-      {
-        label: "Tag",
-        value: DiscountConditionType.PRODUCT_TAGS,
-        description: "Only for specific tags",
-        onClick: () =>
-          layeredModalContext.push({
-            title: "Choose tags",
-            onBack: () => layeredModalContext.pop(),
-            view: isDetails ? (
-              <DetailsTagConditionSelector onClose={onClose} />
-            ) : (
-              <AddTagConditionSelector onClose={onClose} />
-            ),
-          }),
-      },
-      {
-        label: "Collection",
-        value: DiscountConditionType.PRODUCT_COLLECTIONS,
-        description: "Only for specific product collections",
-        onClick: () =>
-          layeredModalContext.push({
-            title: "Choose collections",
-            onBack: () => layeredModalContext.pop(),
-            view: isDetails ? (
-              <DetailsCollectionConditionSelector onClose={onClose} />
-            ) : (
-              <AddCollectionConditionSelector onClose={onClose} />
-            ),
-          }),
-      },
-      {
-        label: "Type",
-        value: DiscountConditionType.PRODUCT_TYPES,
-        description: "Only for specific product types",
-        onClick: () =>
-          layeredModalContext.push({
-            title: "Choose types",
-            onBack: () => layeredModalContext.pop(),
-            view: isDetails ? (
-              <DetailsTypeConditionSelector onClose={onClose} />
-            ) : (
-              <AddTypeConditionSelector onClose={onClose} />
-            ),
-          }),
-      },
+      // {
+      //   label: "Tag",
+      //   value: DiscountConditionType.PRODUCT_TAGS,
+      //   description: "Only for specific tags",
+      //   onClick: () =>
+      //     layeredModalContext.push({
+      //       title: "Choose tags",
+      //       onBack: () => layeredModalContext.pop(),
+      //       view: isDetails ? (
+      //         <DetailsTagConditionSelector onClose={onClose} />
+      //       ) : (
+      //         <AddTagConditionSelector onClose={onClose} />
+      //       ),
+      //     }),
+      // },
+      // {
+      //   label: "Collection",
+      //   value: DiscountConditionType.PRODUCT_COLLECTIONS,
+      //   description: "Only for specific product collections",
+      //   onClick: () =>
+      //     layeredModalContext.push({
+      //       title: "Choose collections",
+      //       onBack: () => layeredModalContext.pop(),
+      //       view: isDetails ? (
+      //         <DetailsCollectionConditionSelector onClose={onClose} />
+      //       ) : (
+      //         <AddCollectionConditionSelector onClose={onClose} />
+      //       ),
+      //     }),
+      // },
+      // {
+      //   label: "Type",
+      //   value: DiscountConditionType.PRODUCT_TYPES,
+      //   description: "Only for specific product types",
+      //   onClick: () =>
+      //     layeredModalContext.push({
+      //       title: "Choose types",
+      //       onBack: () => layeredModalContext.pop(),
+      //       view: isDetails ? (
+      //         <DetailsTypeConditionSelector onClose={onClose} />
+      //       ) : (
+      //         <AddTypeConditionSelector onClose={onClose} />
+      //       ),
+      //     }),
+      // },
     ],
     [isDetails]
   )

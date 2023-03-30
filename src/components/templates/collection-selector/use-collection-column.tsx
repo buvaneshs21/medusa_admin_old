@@ -1,18 +1,36 @@
 import moment from "moment"
-import React, { useMemo } from "react"
-
-
+import React, { useMemo, useState } from "react"
 import Tooltip from "../../atoms/tooltip"
+import medusaRequest from "../../../services/request"
 
-const useCollectionTableColumn = () => {
+ 
+ 
+const useCollectionTableColumn = (id) => {
+  
+  const [selectedRow, setSelectedRow] = useState(id)
+
   const columns = useMemo(
     () => [
       {
+        Header: "Select any one",
+        accessor: "selectedData",
+        Cell: ({ row: { original } }) => (
+          <div className="flex items-center">
+            <input
+              type="radio"
+              value={original.id}
+              checked={selectedRow === original.id}
+              onChange={() => setSelectedRow(original.id)}
+            />
+          </div>
+        ),
+      },
+      {
         Header: "Title",
         accessor: "title",
-        Cell: ({ row: { original } }) => {
-          return <div className="flex items-center">{original.title}</div>
-        },
+        Cell: ({ row: { original } }) => (
+          <div className="flex items-center">{original.title}</div>
+        ),
       },
       {
         Header: "Handle",
@@ -45,10 +63,10 @@ const useCollectionTableColumn = () => {
         },
       },
     ],
-    []
+    [selectedRow]
   )
-
-  return [columns]
+    
+  return [columns,selectedRow,setSelectedRow]
 }
 
 export default useCollectionTableColumn
