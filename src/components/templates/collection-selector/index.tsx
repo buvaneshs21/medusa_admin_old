@@ -63,14 +63,14 @@ const CollectionSelectTable: React.FC<CollectionModalFormData> = () => {
   
   const [columns] = useCollectionTableColumn(id)
 
-  const MEDUSA_BACKEND_URL = "http://localhost:9000"
-  const cart_id = "cart_01GTHA4QPPRB3MYBHK6ZRSN6JZ"
+//   const MEDUSA_BACKEND_URL = "http://localhost:9000"
+//   const cart_id = "cart_01GTHA4QPPRB3MYBHK6ZRSN6JZ"
  
-const medusa = new Medusa({ baseUrl: MEDUSA_BACKEND_URL, maxRetries: 3 })
-medusa.carts.retrieve(cart_id)
-.then(({ cart }) => {
- console.log(cart.id);
-});
+// const medusa = new Medusa({ baseUrl: MEDUSA_BACKEND_URL, maxRetries: 3 })
+// medusa.carts.retrieve(cart_id)
+// .then(({ cart }) => {
+//  console.log(cart.id);
+// });
 
 
   const {

@@ -41,4 +41,5 @@ RUN npm install --loglevel=error
 
 RUN npm run build &> /dev/null
 
-CMD [ "gatsby", "develop", "-H", "0.0.0.0",  "-p", "7000" ]
+# CMD [ "gatsby", "develop", "-H", "0.0.0.0",  "-p", "7000" ]
+ENTRYPOINT ["yarn", "start"]

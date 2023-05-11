@@ -1,7 +1,7 @@
 import moment from "moment"
 import React, { useMemo, useState } from "react"
 import Tooltip from "../../atoms/tooltip"
-import medusaRequest from "../../../services/request"
+// import medusaRequest from "../../../services/request"
 
  
  
